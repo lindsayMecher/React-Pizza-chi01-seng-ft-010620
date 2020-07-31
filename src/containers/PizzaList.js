@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import Pizza from '../components/Pizza'
+import Pizza from '../components/Pizza';
+
 class PizzaList extends Component {
 
   render() {
+    
     return (
       <table className="table table-striped">
         <thead>
@@ -14,9 +16,7 @@ class PizzaList extends Component {
           </tr>
         </thead>
         <tbody>
-          {
-            //render Pizza here
-          }
+          
         </tbody>
       </table>
     );

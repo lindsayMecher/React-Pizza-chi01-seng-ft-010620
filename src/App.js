@@ -8,6 +8,10 @@ const pizzaURL = "http://localhost:3000/pizzas"
 class App extends Component {
 
   componentDidMount(){
+    this.fetchPizzas();
+  }
+
+  fetchPizzas = () => {
     fetch(pizzaURL)
       .then(resp => resp.json())
       .then(pizzas => {
@@ -20,7 +24,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header/>
-        <PizzaForm/>
+        <PizzaForm fetchPizzas={this.fetchPizzas}/>
         <PizzaList pizzas={this.props.pizzas}/>
       </Fragment>
     );

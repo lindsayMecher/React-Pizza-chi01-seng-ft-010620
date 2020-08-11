@@ -14,7 +14,7 @@ const Pizza = ({ pizza }) => {
       }
       </td>
       <td>
-        <button className={"btn btn-primary"}>
+        <button id={pizza.id} className={"btn btn-primary"}>
           Edit Pizza
         </button>
       </td>
